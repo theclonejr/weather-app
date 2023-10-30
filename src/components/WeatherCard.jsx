@@ -14,7 +14,7 @@ const WeatherCard = ({ weather, temp }) => {
                 <img className='weather__img' src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`} alt="" />{}
             </header>
             <article className='weather__info'>
-                <h3 className='weather__condition'>"{weather?.weather[0].description}"</h3>
+                <h3 className='weather__condition'>"{(weather?.weather[0].description).toUpperCase()}"</h3>
                 <ul className='weather__list'>
                     <li className='weather__item'><span className='weather__label'>Wind Speed </span><span className='weather__value'>{weather?.wind.speed} m/s</span></li>
                     <li className='weather__item'><span className='weather__label'>Clouds </span><span className='weather__value'>{weather?.clouds.all}%</span></li>
