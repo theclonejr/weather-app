@@ -1,0 +1,17 @@
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2015/09/05/20/07/cabin-924958_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.credits{
+    position: absolute;
+    bottom: 0;
+    color: rgb(117, 104, 104);
+    font-size: 0.6rem;
+}
