@@ -41,7 +41,7 @@ function App() {
     }
   },[coords])
 
-  
+  console.log(weather);
 
   return (
     <div className='app'>

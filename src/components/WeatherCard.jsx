@@ -4,6 +4,8 @@ const WeatherCard = ({ weather, temp }) => {
     const [isCelcius, setIsCelcius] = useState(true)
     
     const handleChangeTemp = () => setIsCelcius(!isCelcius)
+    const feelsCelcius = (weather?.main.feels_like - 273.15).toFixed(1)
+    const feelsFahrenheit = (feelsCelcius * 9/5 + 32).toFixed(1)
 
   return (
     <article className='weather'>
@@ -19,6 +21,7 @@ const WeatherCard = ({ weather, temp }) => {
                     <li className='weather__item'><span className='weather__label'>Wind Speed </span><span className='weather__value'>{weather?.wind.speed} m/s</span></li>
                     <li className='weather__item'><span className='weather__label'>Clouds </span><span className='weather__value'>{weather?.clouds.all}%</span></li>
                     <li className='weather__item'><span className='weather__label'>Pressure </span><span className='weather__value'>{weather?.main.pressure}hPa</span></li>
+                    <li className='weather__item'><span className='weather__label'>Feels like</span><span className='weather__value'>{isCelcius ? `${feelsCelcius} °C` : `${feelsFahrenheit} °F` }</span></li>
                 </ul>
             </article>
         </section>
